@@ -1,0 +1,62 @@
+{
+    "TA0":{
+        "children": ["TA1", "TA3"],
+        "exec_time": 11.11,
+        "energy": 13.89,
+        "processor": "P2"
+    },
+    "TA1":{
+        "children": ["TA2", "TA7"],
+        "exec_time": 11.25,
+        "energy": 14.06,
+        "processor": "P2"
+    },
+    "TA2":{
+        "children": ["TA4"],
+        "exec_time": 12.1,
+        "energy": 15.13,
+        "processor": "P2"
+    },
+    "TA3":{
+        "children": ["TA5", "TA6"],
+        "exec_time": 9.54,
+        "energy": 24.54,
+        "processor": "P3"
+    },
+    "TA4":{
+        "children": ["MA"],
+        "exec_time": 12.43,
+        "energy": 15.54,
+        "processor": "P2"
+    },
+    "TA5":{
+        "children": ["MA"],
+        "exec_time": 11.03,
+        "energy": 13.78,
+        "processor": "P2"
+    },
+    "TA6":{
+        "children": ["MA"],
+        "exec_time": 9.39,
+        "energy": 24.39,
+        "processor": "P3"
+    },
+    "TA7":{
+        "children": ["TA8", "TA9"],
+        "exec_time": 9.2,
+        "energy": 24.2,
+        "processor": "P3"
+    },
+    "TA8":{
+        "children": ["MA"],
+        "exec_time": 11.58,
+        "energy": 14.47,
+        "processor": "P2"
+    },
+    "TA9":{
+        "children": ["MA"],
+        "exec_time": 10.2,
+        "energy": 25.2,
+        "processor": "P3"
+    }
+}
