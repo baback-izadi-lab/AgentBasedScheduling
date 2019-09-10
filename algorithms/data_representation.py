@@ -14,13 +14,14 @@ class TGFFParser:
             self.lines = tgff.read()
         self.get_arcs()
         self.get_tasks()
+        self.final_data = {}
+        self.final_data['arcs'] = self.arcs
+        self.final_data['proc_exec'] = self.proc_exec
+        self.final_data['proc_power'] = self.proc_power
+        return self.final_data
 
     def write_json(self, output_file):
-        json_data = {}
-        json_data['arcs'] = self.arcs
-        json_data['proc_exec'] = self.proc_exec
-        json_data['proc_power'] = self.proc_power
-        json.dump(json_data, open(output_file, 'w'))
+        json.dump(self.final_data, open(output_file, 'w'))
 
     def get_tasks(self):
         task_regex = re.compile(r'TASK\s\w+\sTYPE\s\d+')
@@ -111,5 +112,5 @@ class TGFFParser:
 
 if __name__ == "__main__":
     parser = TGFFParser()
-    parser.parse('../TaskGenerator/example_case0.tgff', 3, [1, 2, 3])
+    data = parser.parse('../TaskGenerator/example_case0.tgff', 3, [1, 2, 3])
     parser.write_json('test.json')
