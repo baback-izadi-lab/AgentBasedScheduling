@@ -1,0 +1,31 @@
+{
+    "num_proc": 3,
+    "num_tasks": 10,
+    "num_speeds": [1, 2, 3],
+    "indegree": 2,
+    "outdegree": 2,
+    "arc_average": 0.2,
+    "arc_variation": 0.01,
+    "proc_details": [
+        {
+            "exec_average": [8.0],
+            "exec_variation": [0.8],
+            "power_average": [65],
+            "power_variation": [6.5]
+
+        },
+        {
+            "exec_average": [6.0, 8.0],
+            "exec_variation": [0.6, 0.8],
+            "power_average": [90, 65],
+            "power_variation": [9.0, 6.5]
+        },
+        {
+            "exec_average": [4.0, 6.0, 8.0],
+            "exec_variation": [0.4, 0.6, 0.8],
+            "power_average": [130, 90, 65],
+            "power_variation": [13.0, 9.0, 6.5]
+        }
+
+    ]
+}
